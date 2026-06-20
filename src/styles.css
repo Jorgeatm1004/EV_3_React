@@ -413,18 +413,6 @@ h1 {
   color: #a3e635;
   font-weight: 600;
 }
-
-.vehicle-card__details {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 6px 12px;
-  margin: 8px 0 0;
->>>>>>> Stashed changes
-  color: #cbd5e1;
-}
-
-.vehicle-card__match {
-
 .vehicle-card__details {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
