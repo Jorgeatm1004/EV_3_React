@@ -8,9 +8,9 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-branding">
         <a className="navbar-brand" href="#inicio">
-          Frontend React
+          AutoMatch
         </a>
-        <p className="navbar-note">Catálogo y seguimiento de vehículos</p>
+        <p className="navbar-note">Las mejores ofertas en vehículos</p>
       </div>
 
       <div className="navbar-links">
