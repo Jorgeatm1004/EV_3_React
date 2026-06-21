@@ -41,3 +41,19 @@ COMO EJECUTAR EL PROYECTO EN LOCAL
     npm install
 4.- iniciar 
     npm run dev
+
+Prompts que se usaron en la creacion y edicion de la pagina
+
+1.- dentro de la carpeta frontend_react, quiero que hagas una SPA con react y vite, primero genera la estructura para despues definir de que va a ser la SPA
+
+2.- dentro de src haz una carpeta de components, donde tiene que estar los archivos, navbar.jsx, vehiclecard.jsx y addvehicleform.jsx
+
+3.- en src, haz la carpeta views donde tiene que estar el archivo automatchdash.jsx
+
+4.- en los archivos dentro de components y views, rellenalos con categorías de autos y precios.
+
+5.- el navbar, haz un boton para las categorias, para que el usuario aprete el boton y las categorias de autos se muestren en en una columna
+
+6.- para automatch, seria elegir las preferencias del usuario y en base a esto mostrar el porcentaje de coincidencia para mostrar los autos recomendados
+
+7.- quiero modificar estyles.css, quiero un diseño moderno y elegante
