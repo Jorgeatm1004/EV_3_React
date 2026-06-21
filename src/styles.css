@@ -34,6 +34,21 @@ select {
   font: inherit;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-frame {
+  min-height: 100vh;
+}
+
+.app-content {
+  display: grid;
+  gap: 32px;
+  padding: 24px;
+}
+
 .app-shell {
   min-height: 100vh;
   display: grid;
@@ -71,3 +86,538 @@ h1 {
   color: #cbd5e1;
   font-size: 1.05rem;
 }
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 24px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(2, 6, 23, 0.72);
+  backdrop-filter: blur(16px);
+}
+
+.navbar-branding {
+  display: grid;
+  gap: 4px;
+}
+
+.navbar-brand {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #f8fafc;
+}
+
+.navbar-note {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.84rem;
+}
+
+.navbar-links,
+.navbar-categories {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-categories-panel {
+  position: relative;
+  display: grid;
+  gap: 12px;
+}
+
+.navbar-categories-toggle {
+  padding: 8px 14px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 999px;
+  color: #cbd5e1;
+  background: rgba(15, 23, 42, 0.66);
+  cursor: pointer;
+}
+
+.navbar-categories-toggle:hover {
+  color: #ffffff;
+  border-color: rgba(138, 180, 255, 0.36);
+  background: rgba(30, 41, 59, 0.9);
+}
+
+.navbar-links a,
+.navbar-categories a {
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #cbd5e1;
+  background: rgba(15, 23, 42, 0.66);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.navbar-links a:hover,
+.navbar-categories a:hover {
+  color: #ffffff;
+  border-color: rgba(138, 180, 255, 0.36);
+  background: rgba(30, 41, 59, 0.9);
+}
+
+.navbar-categories {
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 180px;
+  padding: 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(15, 23, 42, 0.96);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.3);
+}
+
+.navbar-categories--open {
+  display: flex;
+}
+
+.navbar-categories a {
+  width: 100%;
+}
+
+.dashboard-view {
+  display: grid;
+  gap: 24px;
+}
+
+.dashboard-hero {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  padding: 28px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 28px;
+  background: rgba(15, 23, 42, 0.72);
+  box-shadow: 0 24px 80px rgba(2, 6, 23, 0.35);
+}
+
+.dashboard-hero__eyebrow {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  color: #8ab4ff;
+}
+
+.dashboard-hero__badge-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: flex-start;
+  justify-content: flex-end;
+}
+
+.dashboard-hero__badge {
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: #dbeafe;
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.dashboard-view__title {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1;
+}
+
+.dashboard-view__description {
+  margin: 16px 0 0;
+  max-width: 60ch;
+  color: #cbd5e1;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.automatch-panel {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(15, 23, 42, 0.76);
+  box-shadow: 0 16px 48px rgba(2, 6, 23, 0.28);
+}
+
+.automatch-panel__header {
+  display: grid;
+  gap: 8px;
+}
+
+.automatch-controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.automatch-control {
+  display: grid;
+  gap: 8px;
+}
+
+.automatch-control__label {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+}
+
+.dashboard-stat {
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(15, 23, 42, 0.72);
+}
+
+.dashboard-stat__value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+.dashboard-stat__label {
+  display: block;
+  margin-top: 6px;
+  color: #cbd5e1;
+}
+
+.content-section {
+  display: grid;
+  gap: 18px;
+}
+
+.content-section__header {
+  display: grid;
+  gap: 10px;
+}
+
+.content-section__title {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.content-section__description {
+  margin: 0;
+  max-width: 68ch;
+  color: #cbd5e1;
+}
+
+.vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+/* Vehicle card base styles (merged) */
+.vehicle-card {
+  width: 100%;
+  max-width: 420px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));
+  border: 1px solid rgba(148,163,184,0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  padding: 12px;
+  align-items: start;
+  position: relative;
+}
+
+.vehicle-card__image {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.vehicle-card__placeholder {
+  width: 140px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  background: rgba(148,163,184,0.04);
+  color: #9ca3af;
+  border-radius: 8px;
+}
+
+.vehicle-card__content h3,
+.vehicle-card__title {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+
+.vehicle-card__badge {
+  margin: 0 0 6px;
+  color: #8ab4ff;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+}
+
+.vehicle-card__price {
+  margin: 8px 0;
+  color: #a3e635;
+  font-weight: 600;
+}
+/* Vehicle card styles */
+.vehicle-card {
+  width: 100%;
+  max-width: 420px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));
+  border: 1px solid rgba(148,163,184,0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  padding: 12px;
+  align-items: start;
+  position: relative;
+}
+
+.vehicle-card__image {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.vehicle-card__placeholder {
+  width: 140px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  background: rgba(148,163,184,0.04);
+  color: #9ca3af;
+  border-radius: 8px;
+}
+
+.vehicle-card__content h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+
+.vehicle-card__price {
+  margin: 8px 0;
+  color: #a3e635;
+  font-weight: 600;
+}
+.vehicle-card__details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 12px;
+  margin: 8px 0 0;
+  color: #cbd5e1;
+}
+
+.vehicle-card__match {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: rgba(34,197,94,0.12);
+  color: #bbf7d0;
+  padding: 6px 8px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.vehicle-card__reasons {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: #cbd5e1;
+}
+
+.vehicle-card__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.vehicle-card__feature {
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #dbeafe;
+  background: rgba(30, 41, 59, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.vehicle-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.vehicle-card__meta {
+  color: #94a3b8;
+}
+
+.vehicle-card__button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 999px;
+  color: #08111f;
+  font-weight: 700;
+  background: linear-gradient(135deg, #8ab4ff 0%, #c7d2fe 100%);
+  cursor: pointer;
+}
+
+.add-vehicle-form {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(15, 23, 42, 0.76);
+  box-shadow: 0 16px 48px rgba(2, 6, 23, 0.28);
+}
+
+.add-vehicle-form__header {
+  display: grid;
+  gap: 8px;
+}
+
+.add-vehicle-form__eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  color: #8ab4ff;
+}
+
+.add-vehicle-form__title {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.add-vehicle-form__description {
+  margin: 0;
+  color: #cbd5e1;
+}
+
+.add-vehicle-form__fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.add-vehicle-form__group {
+  display: grid;
+  gap: 8px;
+}
+
+.add-vehicle-form__group--full {
+  grid-column: 1 / -1;
+}
+
+.add-vehicle-form__label {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+}
+
+.add-vehicle-form__input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  color: #f8fafc;
+  background: rgba(2, 6, 23, 0.7);
+  outline: none;
+}
+
+.add-vehicle-form__textarea {
+  resize: vertical;
+}
+
+.add-vehicle-form__input:focus {
+  border-color: rgba(138, 180, 255, 0.65);
+  box-shadow: 0 0 0 3px rgba(72, 130, 255, 0.18);
+}
+
+.add-vehicle-form__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.add-vehicle-form__helper {
+  margin: 0;
+  color: #94a3b8;
+}
+
+.add-vehicle-form__button {
+  min-width: 180px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 999px;
+  color: #08111f;
+  font-weight: 700;
+  background: linear-gradient(135deg, #8ab4ff 0%, #c7d2fe 100%);
+  cursor: pointer;
+}
+
+.add-vehicle-form__button:hover,
+.vehicle-card__button:hover {
+  filter: brightness(1.05);
+}
+
+@media (max-width: 960px) {
+  .dashboard-hero,
+  .vehicle-grid,
+  .dashboard-stats,
+  .add-vehicle-form__fields,
+  .automatch-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-hero__badge-panel {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding-inline: 16px;
+  }
+
+  .navbar-categories-panel {
+    width: 100%;
+  }
+
+  .navbar-categories-toggle {
+    width: 100%;
+  }
+
+  .app-content {
+    padding: 16px;
+  }
+
+  .vehicle-card__footer,
+  .add-vehicle-form__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .vehicle-card__button,
+  .add-vehicle-form__button {
+    width: 100%;
+  }
+}
+
